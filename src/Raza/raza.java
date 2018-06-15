@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Asiria;
+package Raza;
 
 /**
  *
  * @author karla
  */
-public interface Ataque {
-    
+public interface raza {
+    void atacar();
+    void defender();
+    void Descripcion();
 }

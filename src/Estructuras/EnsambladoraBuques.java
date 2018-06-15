@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Minoica;
+package Estructuras;
 
 /**
  *
  * @author karla
  */
-public interface ataque {
+public class EnsambladoraBuques implements Estructuras {
+
+    int vida=80;
+    @Override
+    public void construir() {
+        System.out.println("Torres Construidas");
+    }
     
 }

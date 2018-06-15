@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Asiria;
+package Estructuras;
 
 /**
  *
  * @author karla
  */
-public class Arqueros {
+public class MiliciaEspecial  implements Estructuras{
+
+    int vida=150;
+    @Override
+    public void construir() {
+        System.out.println("Milicia Especial Creada");
+    }
     
 }

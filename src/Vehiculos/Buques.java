@@ -3,12 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Hitita;
+package Vehiculos;
+
 
 /**
  *
  * @author karla
  */
-public interface Defensa {
+public class Buques implements vehiculos {
+
+    public int vida =60;
+
+    @Override
+    public void atacar() {
+       System.out.println("Buque atacando");
+    }
     
 }
