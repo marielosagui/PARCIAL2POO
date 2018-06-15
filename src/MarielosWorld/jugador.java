@@ -51,6 +51,7 @@ public class jugador {
         factory3 = FProducer.getfactory("vehiculo");
     }
 
+    @SuppressWarnings("empty-statement")
     public ArrayList realizarTurno(int oro, int madera, int piedra, int ncm){
         boolean x=true;
         int menuprinc, menuedif, menuconsedif ,f=0, e, menuveh, menutropa;
@@ -58,7 +59,8 @@ public class jugador {
         
         try{
         while(x == true){
-            System.out.println("***" + "Turno de " + nombre + "***");
+            System.out.println("========================================");
+            System.out.println("   ***" + "Turno de " + nombre + "***");
             System.out.println("Oro: " + oro + "\t" + "Madera: " + madera + "\t" + "\t" + "Piedra: " + piedra);
             System.out.print("\n");
             System.out.println("1.) Edificaciones");
@@ -408,6 +410,7 @@ public class jugador {
                             break;
                         case 3: /**************************ATACAR*************************/
                             System.out.println("ESTAS ATACANDO -> -> ->");
+                            x=false;
                             break;
                         case 4: /**************************MENU PRINCIPAL*************************/
                             break;
@@ -540,8 +543,6 @@ public class jugador {
                 case 5: /**************************RECOLECTAR RECURSOS*************************/
                     
                     int minas=0,aserraderos=0,pedreras=0;
-
-                    
                     for (int n = 0; n < Estructuras.size(); n=n+1){
                         if (Estructuras.get(n)=="mina"){
                             minas=minas+1;
@@ -553,8 +554,10 @@ public class jugador {
                             pedreras=pedreras+1;
                         }
                     }
-                    
-                    
+                     if(minas ==0 && aserraderos==0 && pedreras==0){
+                            System.out.println("No tienes recursos por recolectar");
+                        break;
+                     }
                     switch (ncm){
                         case 0:
                             if (minas>0 && oro<=10000){
@@ -569,7 +572,8 @@ public class jugador {
                                     madera=5000;
                                 }
                             }
-                            if (pedreras>0 && piedra<=3000){
+                            
+                            else if (pedreras>0 && piedra<=3000){
                                 piedra=piedra+50*pedreras;
                                 if (piedra>3000){
                                     piedra=3000;
@@ -579,8 +583,6 @@ public class jugador {
                             x=false;
                             break;
                         case 1:
-                                if (minas==0){
-                                }
                                 if (minas>0 && oro<=10000*1.1){
                                     oro=oro+200*minas;
                                     if (oro>10000*1.1){
@@ -644,9 +646,11 @@ public class jugador {
                                 }
                             }
                             System.out.println("Tus recursos fueron recolectados");
+                    }
+                    
                             x=false;
                             break;       
-                    }
+                        
                 case 6: /**************************FINALIZAR TURNO*************************/
                     x = false;
                     break;
