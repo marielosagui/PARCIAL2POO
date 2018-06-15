@@ -113,9 +113,9 @@ public class menu {
 
     public static void menurazas() {
         System.out.println("\t Razas Disponibles");
-        System.out.println("1.) FENICIA");
-        System.out.println("2.) PERSA");
-        System.out.println("3.) YAMATO");       
+        System.out.println("1.) FENICIA" +"\t"+ "*Sus edificaciones son costosas,soldados debiles.");
+        System.out.println("2.) PERSA"   +"\t"+ "*Sus edificaciones son costosas,construcciones lentas.");
+        System.out.println("3.) YAMATO"  +"\t"+ "*Sus edificaciones son baratas,soldados fuertes.");       
     }
   
 }    
