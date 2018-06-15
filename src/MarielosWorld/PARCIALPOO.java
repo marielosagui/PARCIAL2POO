@@ -8,7 +8,7 @@ package MarielosWorld;
  *
  * @author karla
  */
-public class PARCIAL2POO {
+public class PARCIALPOO {
 
     /**
      * @param args the command line arguments
