@@ -407,7 +407,7 @@ public class jugador {
                             System.out.println("Tus tropas son: "+Tropa);
                             break;
                         case 3: /**************************ATACAR*************************/
-                            System.out.println("->ESTAS ATACANDO -> -> ->");
+                            System.out.println("ESTAS ATACANDO -> -> ->");
                             break;
                         case 4: /**************************MENU PRINCIPAL*************************/
                             break;

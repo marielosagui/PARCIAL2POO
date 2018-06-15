@@ -6,7 +6,7 @@
 package Vehiculos;
 
 import Estructuras.Estructuras;
-import parcial2poo.AbstracFactory;
+import MarielosWorld.AbstracFactory;
 import Raza.raza;
 import Soldados.Soldado;
 
